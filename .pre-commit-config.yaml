@@ -1,0 +1,26 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    - id: end-of-file-fixer
+      description: Ensures that a file is either empty, or ends with one newline.
+    - id: trailing-whitespace
+      description: This hook trims trailing whitespace.
+    - id: check-docstring-first
+      description: Checks a common error of defining a docstring after code.
+    - id:  check-merge-conflict
+      description: Check for files that contain merge conflict strings.
+
+-   repo: https://github.com/psf/black
+    rev: 23.7.0
+    hooks:
+    - id: black
+      description:  Reformats entire files in accordance to PEP8.
+      args: [--line-length=88]
+
+-   repo: https://github.com/pycqa/flake8
+    rev: 6.0.0
+    hooks:
+    - id: flake8
+      description: command-line utility for enforcing style consistency across Python projects.
+      args: [--max-line-length=88]
